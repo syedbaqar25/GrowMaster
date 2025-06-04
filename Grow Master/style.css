@@ -1,0 +1,763 @@
+@font-face {
+  font-family: "Gyrotrope";
+  src: url(/fonts/Gyrotrope-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url(/fonts/NeueMachina-Light.otf);
+}
+
+@font-face {
+  font-family: 'juana';
+  src: url(/fonts/juanaLight.otf);
+}
+
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
+
+body {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-height: fit-content;
+  background-color: #0c0c0c;
+  font-family: 'NeueMachina', Courier, monospace;
+  color: #fff;
+  overflow-x: clip;
+}
+
+#dropdown {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;  
+  max-width: none;
+  background: rgba(12, 12, 12, 0.981);
+  backdrop-filter: blur(10px);
+  z-index: 20000;
+  display: block;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition:
+    transform 0.4s ease-in-out,
+    opacity 0.3s 0.1s ease-in-out;
+  padding: 40px 24px 24px 24px;
+  font-size: 1.3rem;
+  text-align: left;
+  font-family: system-ui;
+  padding-top: 100px;
+}
+
+.dropdown-content{
+ display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.dropdown-content li a{
+  text-decoration: none;
+  color: #fff;
+
+}
+
+#dropdown.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  transition:
+    transform 0.4s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.no-scroll .blobs {
+  opacity: 0;
+  pointer-events: none;
+  transition: display 0.5s ease-in-out;
+}
+
+.blobs{
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0.3;
+}
+
+
+header {
+  font-family: 'NeueMachina', 'Courier New';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 50px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  color: white;
+  z-index: 10000;
+  transition: top 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.navright {
+  padding-right: 30px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 21000;
+  gap: 4px;
+  transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.hamburger .bar {
+  display: block;
+  width: 28px;
+  height: 3.1px;
+  background: #fff;
+  border-radius: 100%;
+  transition: 
+  transform 0.4s cubic-bezier(.68,-0.55,.27,1.55),
+  opacity 0.3s ease;
+}
+
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(5px) rotate(50deg);
+  width: 28.5px;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-50deg);
+  width: 28.5px;
+}
+
+
+.growMasterlogo {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.site-name {
+  font-family: 'NeueMachina', 'Courier New';
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14.5px;
+}
+
+#navlinkBounce {
+  animation: bounce 1s infinite;
+}
+
+#navlinkBounce a {
+  color: #da5128e5;
+  font-weight: 600;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1) translate(-5%, 0%);
+  }
+}
+
+.btn {
+  color: #000 !important;
+  font-family: 'NeueMachina';
+  font-weight: 900;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #24cfa7cc;
+  text-decoration: none;
+  width: 800% !important;
+  max-width: 100%;
+  padding: 8px 16px !important;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: block;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #24cfa6;
+  cursor: pointer;
+}
+
+
+.page1 {
+  z-index: 10;
+  background: transparent;
+  backdrop-filter: blur(70px);
+}
+
+.hero {
+  background: transparent;
+  backdrop-filter: blur(50px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  cursor: default;
+  padding: 30px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-family: 'gyrotrope';
+}
+
+
+.hero p {
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'NeueMachina';
+}
+
+
+.heroImg {
+  position: relative;
+  margin-bottom: 14px;
+  width: 220px;
+  height: 220px;
+  border-radius: 100%;
+}
+
+
+
+.greenColor {
+  color: #24cfa6 !important;
+}
+
+
+.boxx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 300px;
+}
+
+.boxx .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxx a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: 'NeueMachina';
+}
+
+.arrowContainer {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 250px;
+}
+
+.arrows {
+  padding: 0;
+  margin: 0;
+  width: 1px;
+  rotate: 50deg;
+  height: 150px;
+  border: 1px solid #fff;
+}
+
+#arrow2 {
+  rotate: -50deg;
+}
+
+#blob1 {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 400px;
+  max-width: 100vw;
+  overflow-x: clip;
+  background: #24cfa6;
+  border-radius: 50% 70% 60% 40% / 50% 40% 60% 70%;
+  filter: blur(10px);
+  height: 450px;
+  rotate: 45deg;
+  opacity: 0.3;
+  animation: morph 7s infinite;
+  mix-blend-mode: screen;
+  translate: transform;
+  z-index: 0;
+}
+
+#blob2 {
+  position: absolute;
+  top: 118%;
+  left: 0%;
+  width: 400px;
+  max-width: 100vw;
+  overflow-x: clip;
+  height: 400px;
+  background: #24cfa6;
+  border-radius: 50% 70% 60% 40% / 50% 40% 60% 70%;
+  filter: blur(60px);
+  opacity: 0.15;
+  animation: morph 5s infinite;
+  mix-blend-mode: screen;
+  z-index: 10;
+}
+
+#blob3 {
+  z-index: -20;
+  position: absolute;
+  mix-blend-mode: screen;
+  top: 200%;
+  left: 55%;
+  width: 200px;
+  max-width: 100vw;
+  overflow-x: clip;
+  height: 200px;
+  background: radial-gradient(circle at 30% 30%, #24cfa6, #24cfa6);
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: morph 6s infinite ease-in-out;
+}
+
+
+#blob4 {
+  z-index: 0;
+  position: absolute;
+  mix-blend-mode: screen;
+  top: 280%;
+  left: 20%;
+  width: 180px;
+  max-width: 100vw;
+  overflow-x: clip;
+  height: 180px;
+  opacity: 0.2;
+  background: radial-gradient(circle at 100% 0%, #24cfa6, #24cfa6);
+  animation: morph 5s ease-in-out infinite;
+}
+
+#blob5 {
+  z-index: 0;
+  position: absolute;
+  mix-blend-mode: screen;
+  top: 370%;
+  left: 40%;
+  width: 400px;
+  max-width: 100vw;
+  overflow-x: clip;
+  height: 400px;
+  opacity: 0.2;
+  background: radial-gradient(circle at 100% 0%, #24cfa6, #24cfa6);
+  animation: morph 5s ease-in-out infinite;
+}
+
+
+
+@keyframes morph {
+
+  0%,
+  100% {
+    border-radius: 50% 70% 60% 40% / 50% 40% 60% 70%;
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  50% {
+    border-radius: 60% 40% 70% 50% / 60% 50% 40% 70%;
+    transform: scale(1.1) translate(-30%, -50%);
+  }
+}
+
+
+
+.page2 {
+  position: relative;
+  z-index: 100;
+  max-height: fit-content;
+  background: transparent;
+  backdrop-filter: blur(120px);
+}
+
+
+#coursesSection {
+  background: transparent;
+  height: 100%;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  justify-content: center;
+}
+
+#coursesSection h2 {
+  font-size: 40px;
+  margin-left: 90px;
+}
+
+.cardsContainer {
+  max-height: fit-content;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  cursor: default;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.142);
+  min-height: 500px;
+  width: 400px;
+  border-radius: 12px;
+  transition: 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.cards:hover {
+  transform: translateY(-10px);
+  border-color: #24cfa6;
+  box-shadow: 0 0px 18px 0 #24cfa73e;
+}
+
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardButton {
+  text-align: center;
+  font-weight: 900;
+  padding: 8px 16px;
+  background-color: #02a592;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cardButton:hover {
+  background-color: #24cfa7cc;
+  cursor: pointer;
+}
+
+#entrepreneurSection {
+  height: 100vh;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#entrepreneurContent {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  cursor: default;
+  background: transparent;
+  border: 1px solid #ffffff24;
+  border-radius: 12px;
+  height: 70%;
+  width: 70%;
+  transition: 0.3s ease-out;
+}
+
+
+#entrepreneurContent h1 {
+  font-size: 35px;
+}
+
+#entrepreneurContent li {
+  font-size: 18px;
+}
+
+#entrepreneurContent:hover {
+  border-color: #24cfa6;
+  box-shadow: 0 0px 18px 0 #24cfa73e;
+}
+
+.entrepreneurButton {
+  width: 46%;
+}
+
+.page3 {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  min-height: fit-content;
+  background: transparent;
+  backdrop-filter: blur(120px);
+}
+
+#joinusSection {
+  cursor: default;
+  height: 100vh;
+  min-height: fit-content;
+  padding-top: 20px;
+  background: transparent;
+  backdrop-filter: blur(120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#joinusContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 100px;
+  font-size: 30px;
+  padding-top: 8rem;
+  background: transparent;
+  border-radius: 12px;
+  width: 80%;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
+
+#joinusSection h1 {
+  font-size: 80px;
+}
+
+.joinNow {
+  padding-top: 60px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#joinNowbtn {
+  margin-top: 20px;
+  width: 46%;
+}
+
+
+.page4 {
+  cursor: default;
+  font-family: 'NeueMachina';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  height: 70vh;
+  min-height: fit-content;
+  background: transparent;
+  backdrop-filter: blur(120px);
+}
+
+#contactSection {
+  padding: 0px;
+  margin: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  min-height: fit-content;
+  min-width: 0px;
+}
+
+#contactSection h1 {
+  background: transparent;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+#contactSection h1 span {
+  font-family: 'juana';
+  font-style: italic;
+  font-weight: 100;
+}
+
+#contactSectionContent {
+  text-wrap: wrap;
+  background: transparent;
+  z-index: 17;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.contactSectionCards {
+  width: 33%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#email {
+  font-size: 20px;
+  font-weight: 100;
+  gap: 10px;
+}
+
+#email p {
+  cursor: pointer;
+}
+
+#socials {
+  border-right: 1px solid #ffffff24;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#socials h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#socials p {
+  font-size: 14px;
+}
+
+.socialsLogo {
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+}
+
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  min-height: 120px;
+  width: 100%;
+  padding-top: 10px;
+  font-family: "NeueMachina";
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: transparent;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.wrapper .facebook:hover{
+  background: #1877f2;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper .twitter:hover{
+  background: #000;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper .instagram:hover {
+  background: #e4405f;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+#copyright {
+  border-left: 1px solid #ffffff24;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

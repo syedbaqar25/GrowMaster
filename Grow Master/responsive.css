@@ -1,0 +1,540 @@
+@media (max-width: 999px) {
+header{
+  padding: 10px 10px;
+}
+
+.cards {
+  width: 45%;
+}
+#coursesSection {
+  padding: 0px;
+}
+.cardsContainer {
+  flex-wrap: wrap;
+}
+#joinusSection h1 {
+    font-size: 68px;
+}
+#joinusContent {
+    padding-left: 37px;
+    padding-top: 6rem;
+}
+#blob1{
+  width: 300px;
+  height: 300px;
+}
+
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none!important;
+  }
+
+  #hamburger {
+    display: flex!important;
+  }
+
+  header {
+    padding: 10px 0px;
+  }
+
+  .navright {
+    padding-right: 20px;
+  }
+
+  .hero {
+    max-height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .arrowContainer {
+    gap: 210px;
+  }
+
+  .arrows {
+    height: 140px;
+    rotate: 40deg;
+  }
+
+  #arrow2 {
+    rotate: -40deg;
+  }
+
+  .boxx {
+    gap: 150px;
+  }
+
+  .heroImg {
+    width: 180px;
+    height: 180px;
+  }
+
+  .boxx a {
+    font-size: 22px;
+  }
+
+  #coursesSection h2 {
+    font-size: 40px;
+    margin-left: 35px;
+  }
+
+  .cards {
+    width: 65%;
+    gap: 25px;
+    min-height: fit-content;
+  }
+
+  .cardsContainer {
+    padding: 0px 5px;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 80%;
+  }
+
+  #entrepreneurContent {
+    height: 80%;
+    width: 82%;
+  }
+
+  .entrepreneurButton {
+    width: 80%;
+  }
+
+  #joinusSection h1 {
+    font-size: 55px;
+    padding-top: 40px;
+  }
+  #joinusSection {
+    max-height: fit-content;
+  }
+
+  #joinusContent {
+    padding-left: 15px;
+    padding-top: 6rem;
+    font-size: 25px;
+  }
+
+  .joinNow {
+    font-size: 1rem;
+  }
+
+  .page3{
+    max-height: fit-content;
+  }
+
+  contactSection h1 {
+    padding-top: 0px;
+  }
+
+  .page4 {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #contactSectionContent {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .contactSectionCards {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    padding: 20px 0;
+    outline: none;
+  }
+
+  #socials {
+    border-bottom: 1px solid #ffffff24;
+    border-right: none;
+  }
+
+  #copyright {
+    border-left: none;
+    border-top: 1px solid #ffffff24;
+    padding: 30px 0px;
+  }
+
+
+  #contactSection h1 {
+    padding-bottom: 40px;
+  }
+
+  #blob1{
+  top: 5%;
+  left: 30%;
+  width: 100px;
+  height: 155px;
+  opacity: 0.7;
+  }
+
+}
+
+
+
+@media (max-width: 600px) {
+  .growMasterlogo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-name {
+    font-size: 16px;
+    margin-left: 4px;
+  }
+
+  .hamburger svg {
+    height: 1.8em;
+  }
+
+  .navleft {
+    padding: 0 10px;
+  }
+
+  .navright {
+    padding-right: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .arrows {
+    height: 120px;
+    rotate: 35deg;
+  }
+
+  #arrow2 {
+    rotate: -35deg;
+  }
+
+  .arrowContainer {
+    gap: 180px;
+  }
+
+  .boxx {
+    gap: 99px;
+  }
+
+  #entrepreneurContent {
+    width: 90%;
+    height: 65%;
+  }
+
+  .entrepreneurButton {
+    width: 80%;
+  }
+
+  .cards {
+    width: 80%;
+  }
+
+  #joinusSection h1 {
+    font-size: 50px;
+    padding-top: 40px;
+  }
+
+  #joinusContent {
+    padding-left: 0px;
+    padding-top: 6rem;
+    font-size: 23px;
+  }
+
+  .joinNow {
+    font-size: 0.93rem;
+    padding-top: 40px;
+  }
+
+  .page4 {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #contactSection h1 {
+    padding-top: 0px;
+  }
+
+
+  #contactSectionContent {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .contactSectionCards {
+    width: 90%;
+    min-width: 33%;
+    height: auto;
+    padding: 25px 0px;
+  }
+
+  #hamburger{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+
+
+
+@media (max-width: 549px) {
+  .hero-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .arrows {
+    height: 120px;
+    rotate: 30deg;
+  }
+
+  #arrow2 {
+    rotate: -30deg;
+  }
+
+  .arrowContainer {
+    gap: 150px;
+  }
+
+  .boxx {
+    gap: 80px;
+  }
+
+  .heroImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .boxx a {
+    font-size: 18px;
+  }
+
+  #coursesSection h2 {
+    font-size: 25px;
+  }
+.cards{
+  width: 90%;
+}
+  #entrepreneurContent li {
+    font-size: 15px;
+  }
+
+  .entrepreneurButton {
+    width: 90%;
+  }
+
+  #joinusSection h1 {
+    font-size: 45px;
+  }
+
+  #joinusContent {
+    padding-top: 5rem;
+  }
+
+  #email h2 {
+    font-size: 1.3rem;
+  }
+
+  #email p {
+    font-size: 1rem;
+  }
+
+#blob5{
+  width: 300px;
+  height: 300px;
+}
+
+}
+
+
+
+
+@media (max-width: 490px) {
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .arrowContainer {
+    gap: 150px;
+  }
+
+  .arrows {
+    height: 140px;
+    rotate: 30deg;
+  }
+
+  #arrow2 {
+    rotate: -30deg;
+  }
+
+  .boxx {
+    gap: 70px;
+  }
+
+  .heroImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .boxx a {
+    font-size: 16px;
+  }
+
+  .cards h1 {
+    font-size: 26px;
+  }
+
+  .cards li {
+    font-size: 15px;
+  }
+  cardsContainer {
+    padding: 0px 0px;
+  }
+
+  #coursesSection {
+    padding: 0px 25px;
+  }
+  #coursesSection h2 {
+    margin-left: 15px;
+  }
+
+  #joinusSection h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #joinusContent {
+    padding-left: 0px;
+    padding-top: 5rem;
+    font-size: 21px;
+  }
+
+  .joinNow {
+    font-size: 0.8rem;
+  }
+
+  #contactSection h1 {
+    padding-bottom: 40px;
+    font-size: 30px;
+  }
+
+  .contactSectionCards {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+#blob5{
+  width: 250px;
+  height: 250px;
+}
+}
+
+
+
+
+@media (max-width: 430px) {
+
+  .hero-content h1 {
+    font-size: 2.09rem;
+  }
+
+  .hero-content {
+    padding: 0px;
+  }
+
+  .arrows {
+    height: 110px;
+  }
+
+  .arrowContainer {
+    gap: 115px;
+  }
+
+  .boxx {
+    gap: 40px;
+  }
+
+  .heroImg {
+    width: 144px;
+    height: 144px;
+  }
+
+
+  .boxx a {
+    font-size: 15px;
+  }
+
+  .cards {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .cards h1 {
+    font-size: 24px;
+  }
+
+  .cards li {
+    font-size: 12px;
+  }
+
+
+  #entrepreneurContent h1 {
+    font-size: 26px;
+  }
+
+  #entrepreneurContent li {
+    font-size: 13px;
+  }
+
+  #joinusSection h1 {
+    font-size: 33px;
+  }
+
+  #joinusContent {
+    padding-left: 0px;
+    padding-top: 5rem;
+    font-size: 18px;
+  }
+
+  #logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  #socials h3 {
+    margin-top: 4px;
+    font-size: 18px;
+  }
+
+
+  #socials p {
+    font-size: 12px;
+  }
+
+  .contactSectionCards {
+    padding: 5px 0px;
+  }
+
+  #email h2 {
+    font-size: 1rem;
+    padding: 0px 10px;
+  }
+
+  #email p {
+    font-size: 0.8rem;
+  }
+
+  #copyright h3 {
+    font-size: 1rem;
+  }
+}
