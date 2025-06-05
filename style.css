@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Gyrotrope";
-  src: url(/fonts/Gyrotrope-Bold.ttf);
+  src: url(Gyrotrope-Bold.ttf);
 }
 
 @font-face {
   font-family: 'NeueMachina';
-  src: url(/fonts/NeueMachina-Light.otf);
+  src: url(NeueMachina-Light.otf);
 }
 
 @font-face {
   font-family: 'juana';
-  src: url(/fonts/juanaLight.otf);
+  src: url(juanaLight.otf);
 }
 
 
