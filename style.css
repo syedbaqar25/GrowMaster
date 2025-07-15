@@ -173,6 +173,7 @@ header {
   cursor: pointer;
   width: 55px;
   height: 55px;
+  margin-top: 10px;
 }
 
 .site-name {
@@ -283,8 +284,12 @@ header {
   width: 220px;
   height: 220px;
   border-radius: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
+.heroImg:hover {
+ box-shadow: 0px 0px 15px #24cfa6;
+}
 
 
 .greenColor {
