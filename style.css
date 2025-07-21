@@ -284,13 +284,7 @@ header {
   width: 220px;
   height: 220px;
   border-radius: 100%;
-  transition: all 0.2s ease-in-out;
 }
-
-.heroImg:hover {
- box-shadow: 0px 0px 15px #24cfa6;
-}
-
 
 .greenColor {
   color: #24cfa6 !important;
@@ -309,6 +303,13 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.imgBox{
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boxx a {
